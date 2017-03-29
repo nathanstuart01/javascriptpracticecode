@@ -1,11 +1,15 @@
-function checkUsername() {
-  let elMsg = document.getElementById('feedback');
-  if (this.value.length < 5 ) {
-    elMsg.textContent = 'Username must be 5 characters or more';
+let elUsername = document.getElementById('username');
+let elMsg = document.getElementById('feedback');
+
+
+function checkUsername(minLength) {
+  if (elUsername.value.length < minLength) {
+    elMsg.textContent = 'Username must be ' + minLength + ' characters or more';
   } else {
-    elMsg.textContent = '';
+    elMsg.innerHTML = '';
   }
 }
 
-let elUsername = document.getElementById('username');
-elUsername.onblur = checkUsername;
+elUsername.addEventListener('blur', function() {
+  checkUsername(5);
+}, false);
