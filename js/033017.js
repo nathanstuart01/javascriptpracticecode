@@ -3,7 +3,7 @@ function checkLength(e, minLength) {
     if (!e) {
       e = window.event;
     }
-} el = e.target || e.srcElement;
+ el = e.target || e.srcElement;
   elMsg = el.nextSibling;
 
   if (el.value.length < minLength ) {
