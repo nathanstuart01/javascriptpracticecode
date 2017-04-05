@@ -1,9 +1,3 @@
-function setup() {
- let textInput;
- textInput = document.getElementById('username');
- textInput.focus();
-}
-
 function checkUsername() {
   let username = el.value;
   if (username.length < 5) {
@@ -19,6 +13,8 @@ function tipUsername() {
   elMsg.innerHTML = 'Username must be at least 5 characters';
 }
 
-let el = document.getElementById('')
+let el = document.getElementById('username');
+let elMsg = document.getElementById('feedback');
 
-window.addEventListener('load', setup, false);
+el.addEventListener('focus', tipUsername, false);
+el.addEventListener('blur', checkUsername, false);
