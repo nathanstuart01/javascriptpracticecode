@@ -46,10 +46,59 @@ $(document).ready(function(){
 //  });
 //  $('li:contains("honey")').append(' (local)');
 //  });
-  $(function() {
-    $('li:lt(2)').removeClass('hot');
-    $('li').eq(0).addClass('complete');
-    $('li:gt(2)').addClass('cool');
-  });
+//  $(function() {
+//    $('li:lt(2)').removeClass('hot');
+//    $('li').eq(0).addClass('complete');
+//    $('li:gt(2)').addClass('cool');
+//  });
+//  $(function() {
+//    let $newItemButton = $('#newItemButton');
+//    let $newItemForm = $('#newItemForm');
+//    let $textInput = $('input:text');
+//
+//    $newItemButton.show();
+//    $newItemForm.hide();
+//
+//    $('#showForm').on('click', function(){
+//      $newItemButton.hide();
+//      $newItemForm.show();
+//    });
+//
+//    $newItemForm.on('submit', function(e) {
+//      e.preventDefault();
+//      let newText = $textInput.val();
+//      $('li:last').after('<li>' + newText + '</li>');
+//      $newItemForm.hide();
+//      $newItemButton.show();
+//      $textInput.val('');
+//    });
+//  });
+
+//$(function() {
+//  let $p = $('p');
+//  let $clonedQuote = $p.clone();
+//  $p.remove();
+//  $clonedQuote.insertAfter('h2');
+
+//  let $moveItem = $('#one').detach();
+//  $moveItem.appendTo('ul');
+//});
+
+$(function() {
+  let listHeight = $('#page').height();
+  $('ul').append('<p>Height: ' + listHeight + 'px</p>');
+  $('li').width('50%');
+  $('li#one').width(125);
+  $('li#two').width('75%');
+});
+
+
+
+
+
+
+
+
+
 
 });
